@@ -24,8 +24,8 @@ async function run() {
 
   const randomPos = Math.round(Math.random() * 1000);
   const url =
-    "https://api.tenor.com/v1/search?q=thank%20you&pos=$2&mit=1li&media_filter=minimal&contentfilter=high&key="+TENOR_TOKEN+"";
-
+    "https://api.tenor.com/v1/search?q=thank%20you&pos=$%22${randomPos}%22&mit=1li&media_filter=minimal&contentfilter=high&key=%22${TENOR_TOKEN}";
+    
   console.log(`Searching Tenor: ${url}`);
 
   const response = await fetch(url);
