@@ -1,0 +1,15 @@
+name: 'Thank You Challenger'
+description: 'Say "Thank You" to new pull requests'
+author: 'João Guilherme'
+
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    requered: true
+  TENOR_TOKEN:
+    description: 'Tenor API token'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
